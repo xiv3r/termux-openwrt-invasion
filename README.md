@@ -3,4 +3,4 @@
 
 # Installation
 
-pkg update && pkg upgrade && pkg install curl && curl 
+pkg update && pkg upgrade && pkg install curl && curl https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/install.sh | sh
