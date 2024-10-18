@@ -3,8 +3,9 @@
 # 👉 [Termux](https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_universal.apk)
 
 # Requirements
-- Add Access Point (Disable DHCP)
+- Add Access Point (Disable DHCP).
 - Xiaomi 4C Router -> Access Point Mode WiFi <- Must connect to the AP and not directly on Xiaomi 4C Router.
+- During Transition and Recovery only lan will work, that's why AP is required.
 
 # Auto Install
 - Open termux and paste the command below
@@ -13,9 +14,9 @@ pkg update && pkg upgrade && pkg install curl && curl https://raw.githubusercont
 ```
 
 # Setup
-- Reset the Xiaomi-4C router and configure it with a password of `12345678`
+- Reset the Xiaomi-4C router and configure it with a password of `12345678`.
 - Connect the lan cable to Xiaomi 4C Router WAN for internet.
-- Then connect to the Xiaomi_***** wifi and execute the command below 👇 
+- Then connect to the Xiaomi_***** wifi and execute the command below 👇. 
 
 ```sh
 python3 remote_command_execution_vulnerability.py
@@ -38,16 +39,8 @@ cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/23.05.5/ta
 mtd -e OS1 -r write /tmp/openwrt.bin OS1
 ```
 # 👉 Goto [192.168.1.1](http://192.168.1.1)
-<br><br>
-
 
 # <p align="center"> From Openwrt back to Stock </p>
-
-• Add additional AP Mode WiFi (disable DHCP)
-
-• Every router reboots kindly disconnect and reconnect to the wifi (refresh dhcp ip)
-<br>
-
 ## Getting Openwrt root access through SSH
 ```sh
 ssh root@192.168.1.1
