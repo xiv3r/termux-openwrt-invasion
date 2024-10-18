@@ -16,8 +16,8 @@ pkg update && pkg upgrade && pkg install curl && curl https://raw.githubusercont
 ```sh
 python3 remote_command_execution_vulnerability.py
 ```
-
-# Stock to Openwrt Transition
+# <h1 align="center"> From Stock to Openwrt </h1>
+  
 - ## Get the root access via `telnet`
 ```sh
 telnet 192.168.31.1
@@ -34,8 +34,10 @@ cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/23.05.5/ta
 mtd -e OS1 -r write /tmp/openwrt.bin OS1
 ```
 - ## 👉 Goto [192.168.1.1](http://192.168.1.1)
+<br><br>
 
-# Openwrt back to Stock
+
+# <p align="center"> From Openwrt back to Stock </p>
 
 • Add additional AP mode wifi (disable dhcp) that is connected from the Xiaomi Router.
 
