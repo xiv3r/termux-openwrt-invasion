@@ -9,5 +9,4 @@ unzip openwrt-invasion.zip
 sleep 1s
 
 cd openwrt-invasion
-
 pip install -r requirements.txt && python3 remote_command_execution_vulnerability.py
