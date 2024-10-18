@@ -33,3 +33,15 @@ cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/23.05.5/ta
 ```sh
 mtd -e OS1 -r write /tmp/openwrt.bin OS1
 ```
+Goto [192.168.1.1](http://192.168.1.1)
+
+# Openwrt back to Stock
+• Update & install dependencies
+```sh
+opkg update && opkg install kmod-mtd-rw wget
+```
+• Import the breed.bin into `/tmp`
+```sh
+wget https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/breed.bin
+```
+• 
