@@ -33,15 +33,36 @@ cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/23.05.5/ta
 ```sh
 mtd -e OS1 -r write /tmp/openwrt.bin OS1
 ```
-Goto [192.168.1.1](http://192.168.1.1)
+- ## 👉 Goto [192.168.1.1](http://192.168.1.1)
 
 # Openwrt back to Stock
-• Update & install dependencies
+
+• Add additional AP mode wifi (disable dhcp) that is connected from the Xiaomi Router.
+
+• Every router reboots kindly disconnect and reconnect to the wifi (refresh dhcp ip)
+<br>
+## Update & install dependencies
 ```sh
 opkg update && opkg install kmod-mtd-rw wget
 ```
-• Import the breed.bin into `/tmp`
+## Import the breed.bin into `/tmp`
 ```sh
-wget https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/breed.bin
+cd /tmp && wget https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/breed.bin
 ```
-• 
+## Allow mtd write permission
+```sh
+insmod mtd-rw i_want_a_brick=1
+```
+## Flash the `breed.bin` into the `bootloader`
+```sh
+mtd -e bootloader -r write /tmp/breed.bin bootloader
+```
+## Download this 👉 [recovery.bin](https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/recovery.bin)
+
+## Goto the breed dashboard
+- 👉 [192.168.1.1](192.168.1.1)
+  - upgrade -> programmer mode
+- Load the `16MB recovery.bin` Firmware
+  - unchecked `skip bootloader`
+  - unchecked `skip eeprom`
+  - Click `Upgrade`
