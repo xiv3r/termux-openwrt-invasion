@@ -68,3 +68,5 @@ mtd -e bootloader -r write /tmp/breed.bin bootloader
   - unchecked `skip bootloader`
   - unchecked `skip eeprom`
   - Click `Upgrade`
+ 
+ # Goto 👉 [192.168.31.1](http://192.168.31.1)
