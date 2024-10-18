@@ -22,7 +22,7 @@ python3 remote_command_execution_vulnerability.py
 ```
 # <h1 align="center"> From Stock to Openwrt </h1>
   
-- ## Get the root access via `telnet`
+- ## Getting the root access via `telnet`
 ```sh
 telnet 192.168.31.1
 ```
@@ -47,6 +47,14 @@ mtd -e OS1 -r write /tmp/openwrt.bin OS1
 
 • Every router reboots kindly disconnect and reconnect to the wifi (refresh dhcp ip)
 <br>
+
+## Getting Openwrt root access through SSH
+```sh
+ssh root@192.168.1.1
+```
+- passwd:`your openwrt admin password`
+
+
 ## Update & install dependencies
 ```sh
 opkg update && opkg install kmod-mtd-rw wget
