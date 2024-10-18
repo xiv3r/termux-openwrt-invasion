@@ -1,9 +1,13 @@
-# Download and Install Termux
+## Download and Install Termux
 
-## 👉 [Termux](https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_universal.apk)
+# 👉 [Termux](https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_universal.apk)
+
+# Requirements
+- Add Access Point (Disable DHCP)
+- Xiaomi 4C Router -> Access Point Mode WiFi <- Must connect to the AP and not directly on Xiaomi 4C Router.
 
 # Auto Install
-
+- Open termux and paste the command below
 ```sh
 pkg update && pkg upgrade && pkg install curl && curl https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/openwrt-invasion.sh > openwrt-invasion.sh && sh openwrt-invasion.sh
 ```
@@ -33,13 +37,13 @@ cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/23.05.5/ta
 ```sh
 mtd -e OS1 -r write /tmp/openwrt.bin OS1
 ```
-- ## 👉 Goto [192.168.1.1](http://192.168.1.1)
+# 👉 Goto [192.168.1.1](http://192.168.1.1)
 <br><br>
 
 
 # <p align="center"> From Openwrt back to Stock </p>
 
-• Add additional AP mode wifi (disable dhcp) that is connected from the Xiaomi Router.
+• Add additional AP Mode WiFi (disable DHCP)
 
 • Every router reboots kindly disconnect and reconnect to the wifi (refresh dhcp ip)
 <br>
@@ -64,9 +68,9 @@ mtd -e bootloader -r write /tmp/breed.bin bootloader
 ## Goto the breed dashboard
 - 👉 [192.168.1.1](192.168.1.1)
   - upgrade -> programmer mode
-- Load the `16MB recovery.bin` Firmware
+- Import the `16MB recovery.bin` Firmware
   - unchecked `skip bootloader`
   - unchecked `skip eeprom`
-  - Click `Upgrade`
+  - click `Upgrade`
  
  # Goto 👉 [192.168.31.1](http://192.168.31.1)
