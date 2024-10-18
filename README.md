@@ -10,8 +10,23 @@ pkg update && pkg upgrade && pkg install curl && curl https://raw.githubusercont
 
 # Setup
 - Reset the router and configure with a password of `12345678`
+- Connect the lan cable to Xiaomi 4C Router WAN for internet.
 - Then connect to the Xiaomi_***** wifi and execute the command below 👇 
 
 ```sh
 python3 remote_command_execution_vulnerability.py
+```
+
+# Stock to Openwrt Transition
+- Get the root access via `telnet`
+```sh
+telnet 192.168.31.1
+```
+- Download the openwrt
+```sh
+cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/23.05.5/targets/ramips/mt76x8/openwrt-23.05.5-ramips-mt76x8-xiaomi_mi-router-4c-squashfs-sysupgrade.bin
+```
+- Flash the Firmware
+```sh
+mtd -e OS1 -r write /tmp/openwrt.bin OS1
 ```
