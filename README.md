@@ -63,6 +63,8 @@ opkg update && opkg install kmod-mtd-rw wget
 ```sh
 cd /tmp && wget https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/breed.bin
 ```
+## Download this 👉 [recovery.bin](https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/recovery.bin)
+
 ## Allow mtd write permission
 ```sh
 insmod mtd-rw i_want_a_brick=1
@@ -71,8 +73,6 @@ insmod mtd-rw i_want_a_brick=1
 ```sh
 mtd -e bootloader -r write /tmp/breed.bin bootloader
 ```
-## Download this 👉 [recovery.bin](https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/recovery.bin)
-
 ## Goto the breed dashboard
 - 👉 [192.168.1.1](192.168.1.1)
   - upgrade -> programmer mode
