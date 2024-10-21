@@ -10,7 +10,7 @@
 # Auto Install
 - Open termux and paste the command below
 ```sh
-pkg update && pkg upgrade && pkg install curl && curl https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/openwrt-invasion.sh | sh && cd openwrt-invasion
+termux-setup-storage && pkg update && pkg upgrade && pkg install curl && curl https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/openwrt-invasion.sh | sh && cd openwrt-invasion
 ```
 
 # Setup
@@ -34,6 +34,18 @@ telnet 192.168.31.1
 ```sh
 cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/23.05.5/targets/ramips/mt76x8/openwrt-23.05.5-ramips-mt76x8-xiaomi_mi-router-4c-squashfs-sysupgrade.bin
 ```
+
+- ## Import using termux Fileserver (stable)
+- Add termux new terminal
+```sh
+cd ~/storage/downloads && python3 -m http.server -b localhost
+```
+- Goto 👉 [http://localhost:8000](http://localhost:8000/)
+-  Copy the openwrt.bin file
+```sh
+cd /tmp && wget -O openwrt.bin http://localhost:8000/Downloads/openwrt.bin
+```
+
 - ## Flash the Firmware
 ```sh
 mtd -e OS1 -r write /tmp/openwrt.bin OS1
@@ -56,6 +68,19 @@ opkg update && opkg install kmod-mtd-rw wget
 ```sh
 cd /tmp && wget https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/breed.bin
 ```
+
+- ## Import using termux Fileserver (stable)
+-  Download the breed.bin file
+- Add new termux terminal
+```sh
+cd ~/storage/downloads && python3 -m http.server -b localhost
+```
+- Goto 👉 [http://localhost:8000](http://localhost:8000/)
+-  Copy the openwrt.bin file
+```sh
+cd /tmp && wget -O breed.bin http://localhost:8000/Downloads/breed.bin
+```
+
 ## Download this 👉 [recovery.bin](https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/recovery.bin)
 
 ## Allow mtd write permission
