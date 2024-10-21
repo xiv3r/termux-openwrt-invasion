@@ -36,7 +36,8 @@ cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/23.05.5/ta
 ```
 
 - ## Import using termux Fileserver (stable)
-- Add termux new terminal
+- Download the openwrt firmware 
+- Add new termux terminal
 ```sh
 cd ~/storage/downloads && python3 -m http.server -b localhost
 ```
@@ -81,7 +82,7 @@ cd ~/storage/downloads && python3 -m http.server -b localhost
 cd /tmp && wget -O breed.bin http://localhost:8000/Downloads/breed.bin
 ```
 
-## Download this 👉 [recovery.bin](https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/recovery.bin)
+## First Download this 👉 [recovery.bin](https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/recovery.bin)
 
 ## Allow mtd write permission
 ```sh
@@ -94,7 +95,8 @@ mtd -e bootloader -r write /tmp/breed.bin bootloader
 ## Goto the breed dashboard
 - 👉 [192.168.1.1](192.168.1.1)
   - upgrade -> programmer mode
-- Import the `16MB recovery.bin` Firmware
+- Import the `16MB recovery.bin` Firmware from Download folder
+  - check `Automatic restart`
   - unchecked `skip bootloader`
   - unchecked `skip eeprom`
   - click `Upgrade`
