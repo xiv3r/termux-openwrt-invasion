@@ -30,19 +30,19 @@ telnet 192.168.31.1
 - login:`root`
 - passwd:`root`
 
-- ## Download the openwrt
+- ## Method 1: Download the openwrt
 ```sh
 cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/23.05.5/targets/ramips/mt76x8/openwrt-23.05.5-ramips-mt76x8-xiaomi_mi-router-4c-squashfs-sysupgrade.bin
 ```
 
-- ## Import using termux Fileserver (stable)
+- ## Method 2: Import using termux Fileserver (stable)
 - Download the openwrt firmware 
 - Add new termux terminal
 ```sh
 cd ~/storage/downloads && python3 -m http.server -b localhost
 ```
 - Goto 👉 [http://localhost:8000](http://localhost:8000/)
--  Copy the openwrt.bin file
+- Copy the link of openwrt.bin file
 ```sh
 cd /tmp && wget -O openwrt.bin http://localhost:8000/Downloads/openwrt.bin
 ```
@@ -65,13 +65,13 @@ ssh root@192.168.1.1
 ```sh
 opkg update && opkg install kmod-mtd-rw wget
 ```
-## Import the breed.bin into `/tmp`
+## Method 1: Import the breed.bin from github into `/tmp`
 ```sh
 cd /tmp && wget https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/breed.bin
 ```
 
-- ## Import using termux Fileserver (stable)
--  Download the breed.bin file
+- ## Method 2: Import using termux Fileserver (stable)
+-  Download the [breed.bin](https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/breed.bin) file
 - Add new termux terminal
 ```sh
 cd ~/storage/downloads && python3 -m http.server -b localhost
