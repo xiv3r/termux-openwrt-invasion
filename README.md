@@ -44,7 +44,7 @@ cd ~/storage/downloads && python3 -m http.server -b localhost
 - Goto 👉 [http://localhost:8000](http://localhost:8000/)
 - Copy the link of openwrt.bin file
 ```sh
-cd /tmp && wget -O openwrt.bin http://localhost:8000/Downloads/openwrt.bin
+cd /tmp && wget -O openwrt.bin http://localhost:8000/openwrt.bin
 ```
 
 - ## Flash the Firmware
@@ -79,7 +79,7 @@ cd ~/storage/downloads && python3 -m http.server -b localhost
 - Goto 👉 [http://localhost:8000](http://localhost:8000/)
 -  Copy the openwrt.bin file
 ```sh
-cd /tmp && wget -O breed.bin http://localhost:8000/Downloads/breed.bin
+cd /tmp && wget -O breed.bin http://localhost:8000/breed.bin
 ```
 
 ## First Download this 👉 [recovery.bin](https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/recovery.bin)
