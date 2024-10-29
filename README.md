@@ -10,7 +10,7 @@
 # Auto Install
 - Open termux and paste the command below
 ```sh
-termux-setup-storage && pkg update && pkg upgrade && pkg install curl && curl https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/openwrt-invasion.sh | sh && cd openwrt-invasion
+termux-setup-storage && pkg update && pkg upgrade -y && pkg install curl && curl https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/openwrt-invasion.sh | sh && cd openwrt-invasion
 ```
 
 # Setup
