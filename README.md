@@ -72,5 +72,6 @@ mtd -r write /tmp/breed.bin bootloader
   - unchecked `skip bootloader`
   - unchecked `skip eeprom`
   - click `Upgrade`
+<img src="https://github.com/xiv3r/Xiaomi-Mi-Router-4C-CH341A-Flasher/blob/main/src/backup.jpg">
  
  ## Goto 👉 [192.168.31.1](http://192.168.31.1)
