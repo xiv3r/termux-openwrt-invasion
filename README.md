@@ -5,7 +5,7 @@
 # Auto Install
 - Open termux and paste the command below
 ```sh
-apt update && apt upgrade -y && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/openwrt-invasion.sh | sh && cd openwrt-invasion
+pkg update && pkg upgrade -y && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/openwrt-invasion.sh | sh && cd openwrt-invasion
 ```
 
 # Configuration
