@@ -2,9 +2,8 @@
 👉 [Termux](https://github.com/termux/termux-app/releases/download/v0.118.3/termux-app_v0.118.3+github-debug_arm64-v8a.apk)
 
 # Auto Install
-- Open termux and paste the command below
-```sh
-pkg update && pkg upgrade -y && pkg install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/openwrt-invasion.sh | sh && cd openwrt-invasion && ls
+```
+apt update && pkg upgrade -y && pkg install wget -y && wget -qO openwrt-invasion.sh https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/openwrt-invasion.sh && chmod +x openwrt-invasion && ./openwrt-invasion && cd openwrt-invasion
 ```
 
 # Configuration
@@ -13,7 +12,7 @@ pkg update && pkg upgrade -y && pkg install wget -y && wget -qO- https://raw.git
 - Then connect to the Xiaomi_***** wifi and execute the command below 👇. 
 
 ```sh
-python3 remote_command_execution_vulnerability.py
+python remote_command_execution_vulnerability.py
 ```
 - place the gateway `192.168.31.1`
 - place the password `12345678` and continue entering until it finished.
