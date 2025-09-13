@@ -3,7 +3,7 @@
 
 # Auto Install
 ```
-apt update && pkg upgrade -y && pkg install wget -y && wget -qO openwrt-invasion.sh https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/openwrt-invasion.sh && chmod +x openwrt-invasion && ./openwrt-invasion && cd openwrt-invasion
+apt update && pkg upgrade -y && pkg install wget -y && wget -qO openwrt-invasion.sh https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/openwrt-invasion.sh && chmod +x openwrt-invasion.sh && ./openwrt-invasion.sh && cd openwrt-invasion
 ```
 
 # Configuration
