@@ -11,30 +11,30 @@ apt update && pkg upgrade -y && pkg install wget -y && wget -qO openwrt-invasion
 - Connect the lan cable to Xiaomi 4C Router WAN for internet.
 - Then connect to the Xiaomi_***** wifi and execute the command below 👇. 
 
-```sh
+```
 python remote_command_execution_vulnerability.py
 ```
-- place the gateway `192.168.31.1`
-- place the password `12345678` and continue entering until it finished.
+- enter the gateway `192.168.31.1`
+- enter the password `12345678` and continue entering until it finished.
 
 <img src="https://github.com/xiv3r/termux-openwrt-invasion/blob/main/invasion.png">
 
 # <h1 align="center"> From Stock to Openwrt </h1>
   
 - ## Getting the root shell via `telnet`
-```sh
+```
 telnet 192.168.31.1
 ```
 - login:`root`
 - passwd:`root`
 
 - ## Download the openwrt
-```sh
-cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/24.10.3/targets/ramips/mt76x8/openwrt-24.10.3-ramips-mt76x8-xiaomi_mi-router-4c-squashfs-sysupgrade.bin
+```
+cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/24.10.4/targets/ramips/mt76x8/openwrt-24.10.4-ramips-mt76x8-xiaomi_mi-router-4c-squashfs-sysupgrade.bin
 ```
 
 - ## Flash the Firmware
-```sh
+```
 mtd -r write /tmp/openwrt.bin OS1
 ```
 
@@ -43,29 +43,29 @@ mtd -r write /tmp/openwrt.bin OS1
 # <p align="center"> From Openwrt back to Stock </p>
 
 - ## Getting Openwrt root shell via `SSH`
-```sh
+```
 ssh root@192.168.1.1
 ```
 - passwd:`your openwrt admin password`
 
 
 - ## Update & install dependencies
-```sh
+```
 opkg update && opkg install kmod-mtd-rw wget
 ```
 - ## Import the breed.bin from github into `/tmp`
-```sh
+```
 cd /tmp && wget https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/breed.bin
 ```
 
 - ## First Download this 👉 [recovery.bin](https://raw.githubusercontent.com/xiv3r/termux-openwrt-invasion/refs/heads/main/recovery.bin)
 
 - ## unlocked mtd write permission
-```sh
+```
 insmod mtd-rw i_want_a_brick=1
 ```
 - ## Flash the `breed.bin` into the `bootloader`
-```sh
+```
 mtd -r write /tmp/breed.bin bootloader
 ```
 - ## Goto the breed dashboard
