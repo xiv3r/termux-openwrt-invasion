@@ -8,8 +8,8 @@ apt update && pkg upgrade -y && pkg install wget -y && wget -qO openwrt-invasion
 
 # Configuration
 - Reset the Xiaomi-4C router and configure it with a password of `12345678`.
-- Connect the lan cable to Xiaomi 4C Router WAN for internet.
-- Then connect to the Xiaomi_***** wifi and execute the command below 👇. 
+- Connect the lan cable to the Xiaomi Router 4C WAN (for internet).
+- Then connect to the Xiaomi_***** wifi SSID and execute the command below 👇. 
 
 ```
 python remote_command_execution_vulnerability.py
