@@ -30,7 +30,7 @@ telnet 192.168.31.1
 
 - ## Download the openwrt
 ```
-cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/24.10.4/targets/ramips/mt76x8/openwrt-24.10.4-ramips-mt76x8-xiaomi_mi-router-4c-squashfs-sysupgrade.bin
+cd /tmp && wget -O openwrt.bin https://downloads.openwrt.org/releases/25.12.0-rc4/targets/ramips/mt76x8/openwrt-25.12.0-rc4-ramips-mt76x8-xiaomi_mi-router-4c-squashfs-sysupgrade.bin
 ```
 
 - ## Flash the Firmware
